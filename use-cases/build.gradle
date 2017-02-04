@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile project (':domain')
+
+    compile 'javax.validation:validation-api:1.1.0.Final'
+    compile 'javax.inject:javax.inject:1'
+
+    testCompile 'junit:junit:4.12'
+}

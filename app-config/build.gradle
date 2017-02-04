@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = "com.mosampaio.webapp.core.WebApp"
+
+task runForAcceptanceTests(type:JavaExec) {
+    main = mainClassName
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperty "acceptanceTests", true
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile project (':domain')
+    compile project (':use-cases')
+    compile project (':adapters')
+
+    compile 'org.hibernate:hibernate-validator:5.2.4.Final'
+    compile 'com.google.inject:guice:4.1.0'
+    compile 'ru.vyarus:guice-validator:1.2.0'
+    compile 'javax.el:el-api:2.2.1-b04'
+}

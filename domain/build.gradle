@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    compile 'org.slf4j:slf4j-simple:1.7.21'
+    compile 'org.projectlombok:lombok:1.16.12'
+    compile 'org.eclipse.persistence:javax.persistence:2.1.1'
+    compile 'de.svenkubiak:jBCrypt:0.4'
+
+    testCompile 'junit:junit:4.12'
+}

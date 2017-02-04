@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+    id 'groovy'
+}
+repositories {
+    jcenter()
+}
+
+dependencies {
+    //no other module dependency
+    testCompile "org.codehaus.groovy:groovy-all:2.4.7"
+    testCompile 'io.rest-assured:rest-assured:3.0.2'
+    testCompile 'junit:junit:4.12'
+    
+}
